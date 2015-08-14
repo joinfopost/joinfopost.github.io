@@ -106,9 +106,10 @@
 
 		</div> -->
 		<button type="button" class="mybtn btn btn-default">Запостить</button>
+	<!--	<button class="bttt">OKKK</button> -->
 
 		<div class="feed">
-	<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss/main.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
+	<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua/%2Frss/main.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
 
 </div>
 	</div>
@@ -119,13 +120,13 @@
 		$(document).ready(function(){
 			$('.mybtn').click(function(){
 				for(var i=1; i<$('a').length; i=i+1){
-
 					console.log(($('a').eq(i)).attr('href'));
 					$('#name').val(($('a').eq(i)).attr('href'));
 					$('#boturl').trigger('click');
-					alert("OK");
+					window.alert = function() {};
 					
 				}
+
 
 			})
 		})
@@ -151,7 +152,7 @@
 	})
 	</script>
 
-
+	
 </body>
 
 
