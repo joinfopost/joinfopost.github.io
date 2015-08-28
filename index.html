@@ -11,149 +11,72 @@
 			<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-
-
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-	<script>
-
-    function call() {
-      var msg   = $('#formx').serialize();
-        $.ajax({
-          type: 'POST',
-          url: 'http://news.audioved.com/link.php',
-          data: msg,
-          success: function(data) {
-            $('.results').html(data);
-            $("#formx input[name='url']").val('');
-            
-
-          },
-          error:  function(xhr, str){
-                alert('Возникла ошибка: ' + xhr.responseCode);
-            }
-        });
-
-    }
-
-	</script>
-
-
-
-	
 	
 </head>
 <body>
 
-<div class="url">
- <form method="POST" name="link" id="formx" action="javascript:void(null);" class="navbar-form navbar-left" role="search" onsubmit="call()">
-
-<input id="name" class="form-control" name="url" value="" placeholder="Ссылка для публикации" type="text">
-
-<input value="Запостить" id="boturl" class="btn btn-default" type="submit">
-
-</form>
-
-</div>
-
-
-
-
-
 
 <div class="container">
-	<!--<div class="row">
-		<div class="col-md-6">
-			<h2>Сайт</h2>
-				<div class="radio">
-				  <label>
-				          <input type="radio" name="optionsRadios" id="optionsRadios1" value="joinfo.com">
-				         joinfo.com
-				        </label>
+	<h3>Joinfo.ua | Feed</h3>
+
+	
+		<div class="myblock">
 			
-						<br>
-				         <label>
-				          <input type="radio" name="optionsRadios" id="optionsRadios2" value="joinfo.ua">
-				         joinfo.ua
-				        </label>
-				</div>
 
 		</div>
-		<div class="col-md-6"><h2>Лента</h2>
-
-		<div class="ua">
-			<div class="ua-list">
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main.xml">Главная</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/politic.xml">Политикка</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/econom.xml">Экономика</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/health.xml">Здоровье</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/inworld.xml">В мире</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/sociaty.xml">Общество</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/incidents.xml">Происшествия</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/culture.xml">Культура</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/goroskop.xml">Гороскоп</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/weather.xml">Погода</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/curious.xml">Любопытно</label><br>
-		<label><input type="radio" name="options" id="optionsRadios2" value="rss/main/ecology.xml">Экология</label><br>
-		
-
-
-			</div>
-		</div>
-		<div class="com">COM</div>
-
-
-		</div> -->
-		<button type="button" class="mybtn btn btn-default">Запостить</button>
-	<!--	<button class="bttt">OKKK</button> -->
 
 		<div class="feed">
-	<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua/%2Frss/main.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
+			<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fmain.xml&chan=x&desc=1&date=x" type="text/javascript"></script>
+		</div>
+		<div class="feed">
+			<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fmain%2Fincidents.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
+		</div>
+ 		<div class="feed">
+			<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fleisure.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
+		</div>
 
-</div>
+		<div class="feed">
+			<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fsn%2Fjoinfo_obschestvo.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
+		</div>
+
+		
+	   
+		
+			
 	</div>
 
 	
 </div>
-<script>
-		$(document).ready(function(){
-			$('.mybtn').click(function(){
-				for(var i=1; i<$('a').length; i=i+1){
-					console.log(($('a').eq(i)).attr('href'));
-					$('#name').val(($('a').eq(i)).attr('href'));
-					$('#boturl').trigger('click');
-					window.alert = function() {};
-					
-				}
-
-
-			})
-		})
-	</script>
-
-	<script>
-	$(document).ready(function(){
-		$(".radio input").click(function(){
-			var a = ($(".radio input:radio:checked")).val();
-			if(a=="joinfo.ua"){
-				$(".ua").css("display", "block");
-				$(".com").css("display", "none");
-			}
-			else{
-				$(".com").css("display", "block");
-				$(".ua").css("display", "none");
-			}
-
-
-
-		})
-		
-	})
-	</script>
-
-	
+	<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fmain.xml&chan=y&desc=1&date=y" type="text/javascript"></script>
 </body>
 
+<script>
+	$(document).ready(function(){
+		$(".rss_title").remove();
+		$("p.rss_item").removeClass();
+	})
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("a.rss_item").appendTo("body");
+		$(".myblock a.rss_item").removeClass("rss_item");
+	})
+
+</script> 
+
+<script>
+	$(document).ready(function(){
+		console.log($("body a").length);
+		for(var i=0; i<$("body a").length; i=i+1){
+			$("body a").eq(i).attr("href", "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl="+$("body a").eq(i).attr("href"));
+		}
+	//
+	})
+
+</script>
 
 </html>
