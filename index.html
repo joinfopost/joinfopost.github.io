@@ -27,6 +27,11 @@
 
 		</div>
 
+			<div class="feed">
+     <script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fwww.24svit.com.ua%2Ffeed&chan=y&desc=1&date=y" type="text/javascript"></script>
+
+			</div>
+
 		<div class="feed">
 			<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Fjoinfo.ua%2Frss%2Fmain.xml&chan=x&desc=1&date=x" type="text/javascript"></script>
 		</div>
@@ -62,9 +67,9 @@
 </script>
 <script>
 	$(document).ready(function(){
-		console.log($("body a").length);
 		for(var i=0; i<$("body a").length; i=i+1){
 			$("body a").eq(i).attr("href", "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl="+$("body a").eq(i).attr("href"));
+			$(".container").remove();
 		}
 	//
 	})
