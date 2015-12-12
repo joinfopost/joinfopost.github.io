@@ -17,3 +17,13 @@
 	display: inline-block;
 	margin-top: 20px;
 }
+
+a{
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.feed{
+display: none;
+}
